@@ -1,3 +1,3 @@
 def call(String buildNumber) {
-    currentBuild.dislayName = "#BUILD_NUMBER-${buildNumber}"
+    currentBuild.displayName = "#BUILD_NUMBER-${buildNumber}"
 }
