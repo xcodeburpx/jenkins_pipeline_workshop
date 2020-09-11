@@ -1,6 +1,5 @@
 pipeline {
-    agent "Jenkins file"
-
+    agent { label "jenkins_slave" }
     stages {
         stage('Checkout repo') {
             steps {
