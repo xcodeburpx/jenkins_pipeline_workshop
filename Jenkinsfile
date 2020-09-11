@@ -1,3 +1,5 @@
+@Library('workshop') _
+
 pipeline {
     agent { label "master" }
     stages {
