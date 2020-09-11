@@ -1,20 +1,15 @@
 pipeline {
-    agent any
+    agent "Jenkins file"
 
     stages {
-        stage('Build') {
+        stage('Checkout repo') {
             steps {
-                echo 'Building..'
+                checkout scm
             }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+            post {
+                success {
+                    echo "SUCCESS"
+                }
             }
         }
     }
